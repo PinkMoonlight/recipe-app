@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  /* text-align: left; */
+  display: grid;
 }
 
 .App-logo {
@@ -13,19 +14,20 @@
   }
 }
 
-.App-header {
+.App-header,
+footer {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #f1f1f1f1;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #83c3c0;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +37,88 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* For BABY SHOWER RECIPE ONLY */
+.baby-shower-theme {
+  color: #83c3c0;
+}
+
+/* Mobile Recipe Styles */
+
+.wrapper {
+  font-family: 'Cormorant Garamond', serif;
+  color: #282c34;
+  display: grid;
+  align-items: left;
+  background-color: #83c3c0;
+}
+
+.recipe {
+  background-color: #f1f1f1f1;
+  width: auto;
+  height: auto;
+  color: #282c34;
+  margin: 10px;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.recipe-title,
+.recipe-description,
+footer {
+  text-align: center;
+}
+
+.recipe-description {
+  font-style: italic;
+  width: 70vw;
+  margin: 20px auto;
+  font-size: 14px;
+}
+
+.recipe-image {
+  background-color: #83c3c0;
+
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.recipe-image img {
+  border: 3px solid #f1f1f1f1;
+  width: 200px;
+
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.heading {
+  color: #282c34;
+}
+
+.recipe-instructions li {
+  margin-bottom: 10px;
+}
+
+.recipe-source p {
+  position: relative;
+}
+
+.source-link {
+  color: #282c34;
+  text-decoration: none;
+}
+
+.source-link:hover {
+  position: relative;
+  color: #83c3c0;
+  font-weight: 600;
+  top: -1px;
+  left: 1px;
+}
+
+footer {
+  font-size: 12px;
+  color: #83c3c0;
 }
