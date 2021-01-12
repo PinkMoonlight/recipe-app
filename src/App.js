@@ -13,17 +13,6 @@ function App() {
           </h3>
         </div>
         <div className="navigation"></div>
-
-        {/* <img src={logo} classNameName="App-logo" alt="logo" />
-
-        <a
-          classNameName="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
       </header>
       <section>
         <div className="recipe-wrapper">
