@@ -35,6 +35,7 @@ body {
 
 .App {
   display: grid;
+  box-sizing: border-box;
 }
 
 .App-header,
