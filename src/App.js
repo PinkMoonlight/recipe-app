@@ -8,13 +8,16 @@ function App() {
       <header className="App-header">
         <div>
           {/* <h3>Desserts</h3> */}
-          <h3 class="baby-shower-theme">Kate and Modassar's Baby Shower</h3>
+          <h3 className="baby-shower-theme">
+            Kate and Modassar's Virtual Baby Shower
+          </h3>
         </div>
+        <div className="navigation"></div>
 
-        {/* <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} classNameName="App-logo" alt="logo" />
 
         <a
-          className="App-link"
+          classNameName="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
@@ -22,37 +25,40 @@ function App() {
           Learn React
         </a> */}
       </header>
-      <body>
-        <div class="wrapper">
-          <div class="navigation"></div>
-          {/* Do Grid layout of Recipe card, mobile first design */}
-          <div class="recipe recipe-title">
-            <h2 class="heading recipe-name">Almond Flour Chocolate Brownies</h2>
+      <section>
+        <div className="recipe-wrapper">
+          <div className="recipe recipe-title">
+            <h2 className="heading recipe-name">
+              Almond Flour Chocolate Brownies
+            </h2>
           </div>
-          <div class="recipe recipe-image">
+          <div className="recipe recipe-image">
             <img
               src={brownie}
               alt="chocolate brownie slices"
-              class="recipe-pic"
+              className="recipe-pic"
             ></img>
           </div>
-          <div class="recipe recipe-description">
+          <div className="recipe recipe-description">
             {' '}
             These are easy, fudgey yet cakey and SO DELICIOUS. You'd have no
             idea they're grain free, dairy free, and can be made vegan! Can be
             done by hand, with an electric mixer or Thermomix.
           </div>
-          <div class="recipe recipe-ingredients">
-            <h3 class="secondary-heading">Ingredients</h3>
-            <h4 class="tertiary-heading">Wet:</h4>
+          <div className="recipe recipe-ingredients">
+            <h3 className="secondary-heading">Ingredients</h3>
+            <h4 className="tertiary-heading">Wet:</h4>
             <ul>
               <li>
                 1 cup runny almond butter{' '}
                 <em>(can sub for tahini, any nut butter, or half of each)</em>
               </li>
               <li>
-                1/4 cup coconut sugar{' '}
-                <em>(1/2 cup if like it sweeter) (can sub for brown sugar)</em>
+                1/4 cup rapadura sugar{' '}
+                <em>
+                  (1/2 cup if like it sweeter) (can sub for brown sugar or
+                  coconut sugar)
+                </em>
               </li>
               <li>1/3 cup maple syrup</li>
               <li>
@@ -67,7 +73,7 @@ function App() {
               </li>
               <li>1 tsp vanilla extract</li>
             </ul>
-            <h4 class="tertiary-heading">Dry:</h4>
+            <h4 className="tertiary-heading">Dry:</h4>
 
             <ul>
               <li>
@@ -78,14 +84,14 @@ function App() {
               <li>1/4 tsp sea salt</li>
             </ul>
 
-            <h4 class="tertiary-heading">Optional:</h4>
+            <h4 className="tertiary-heading">Optional:</h4>
             <ul>
               <li>1/4 cup chopped macadmania or pistachio nuts</li>
               <li>1/4 cup dark chocolate chips</li>
             </ul>
           </div>
-          <div class="recipe recipe-instructions">
-            <h3 class="secondary-heading">Instructions</h3>
+          <div className="recipe recipe-instructions">
+            <h3 className="secondary-heading">Instructions</h3>
             <ol>
               <li>Preheat the oven to 350&deg;F / 175&deg;C.</li>
               <li>In a large bowl, combine all wet ingredients.</li>
@@ -116,9 +122,9 @@ function App() {
               </li>
             </ol>
           </div>
-          <div class="recipe recipe-notes">
-            <div class="notes">
-              <h4 class="tertiary-heading">Notes:</h4>
+          <div className="recipe recipe-notes">
+            <div className="notes">
+              <h4 className="tertiary-heading">Notes:</h4>
               <p>
                 The eggs can be subbed for 2 flax eggs. To make, combine 1 tbsp
                 ground flax seeds (for every 1 egg and you need 2 for this
@@ -147,26 +153,39 @@ function App() {
                 just damp, not really wet.
               </p>
             </div>
-            {/* <div class="own-notes">Input areainput field area</div> */}
+            {/* <div className="own-notes">Input areainput field area</div> */}
           </div>
-          <div class="recipe recipe-source">
+          <div className="recipe recipe-source">
             {' '}
-            <h3 secondary-heading>Source:</h3>{' '}
+            <h4 className="secondary-heading">Source:</h4>{' '}
             <p>
               {' '}
               <b>Adapted from -</b> &nbsp;
               <a
-                class="source-link"
+                className="source-link"
                 href="https://eatwithclarity.com/grain-free-brownies/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 https://eatwithclarity.com/grain-free-brownies
               </a>
             </p>
           </div>
         </div>
-      </body>
-      <footer>Built and designed by Kate Cherie</footer>
+      </section>
+      <footer>
+        <p>
+          Built by&nbsp;
+          <a
+            className="footer__name-link"
+            href="https://www.katecherie.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Kate Cherie
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }

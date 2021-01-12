@@ -1,17 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 37.5em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 65%;
+  }
+}
+
+body {
+  line-height: 1.7;
+  box-sizing: border-box;
+}
+
 .App {
   /* text-align: left; */
   display: grid;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  box-sizing: border-box;
 }
 
 .App-header,
@@ -22,7 +47,6 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: #f1f1f1f1;
 }
 
@@ -41,16 +65,21 @@ footer {
 
 /* For BABY SHOWER RECIPE ONLY */
 .baby-shower-theme {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  text-align: center;
   color: #83c3c0;
 }
 
 /* Mobile Recipe Styles */
 
-.wrapper {
-  font-family: 'Cormorant Garamond', serif;
-  color: #282c34;
+.recipe-wrapper {
   display: grid;
-  align-items: left;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 15px;
+  font-family: 'Oswald', sans-serif;
+  color: #282c34;
   background-color: #83c3c0;
 }
 
@@ -59,9 +88,17 @@ footer {
   width: auto;
   height: auto;
   color: #282c34;
-  margin: 10px;
+  margin: 15px;
   padding: 5px 15px;
   border-radius: 5px;
+}
+.heading {
+  font-size: 3rem;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.recipe-title {
+  grid-column: 1 / 13;
 }
 
 .recipe-title,
@@ -71,15 +108,18 @@ footer {
 }
 
 .recipe-description {
+  grid-column: 1 / 13;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
   font-style: italic;
   width: 70vw;
-  margin: 20px auto;
-  font-size: 14px;
+  margin: 10px auto;
+  font-size: 2rem;
 }
 
 .recipe-image {
+  grid-column: 1 / 13;
   background-color: #83c3c0;
-
   margin: 0 auto;
   padding: 0px;
 }
@@ -97,12 +137,47 @@ footer {
   color: #282c34;
 }
 
+.secondary-heading {
+  font-size: 2.5rem;
+}
+
+.tertiary-heading {
+  font-size: 2.3rem;
+}
+
+.recipe-ingredients li,
+.recipe-instructions li,
+.recipe-notes p {
+  font-size: 2rem;
+}
+
+.recipe-ingredients {
+  grid-column: 1 / 13;
+  margin: 0 15px;
+}
+
+.recipe-instructions {
+  grid-column: 1 / 13;
+  margin: 0 15px;
+}
+
 .recipe-instructions li {
   margin-bottom: 10px;
 }
 
+.recipe-notes {
+  grid-column: 1 / 13;
+  margin: 0 15px;
+}
+
+.recipe-source {
+  grid-column: 1 / 13;
+  margin: 0 15px 15px 15px;
+}
+
 .recipe-source p {
   position: relative;
+  font-size: 1.8rem;
 }
 
 .source-link {
@@ -119,6 +194,161 @@ footer {
 }
 
 footer {
-  font-size: 12px;
+  font-size: 1.75rem;
   color: #83c3c0;
+}
+
+.footer__name-link:link,
+.footer__name-link:visited {
+  color: #f8ffe5;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all 0.2s;
+}
+.footer__name-link:hover,
+.footer__name-link:active {
+  color: #f8ffe5;
+  padding: 0 3px;
+  background-color: rgba(131, 195, 192, 0.8);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  transform: rotate(5deg) scale(1.3);
+}
+.footer__name-link:focus,
+.footer__home-link:focus,
+.footer__top-link:focus,
+.source-link {
+  outline-color: #83c3c0;
+}
+
+/* Tablet layout styles */
+@media only screen and (min-width: 750px) {
+  .recipe-title {
+    grid-column: 1 / 13;
+    width: 50vw;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  .recipe-description {
+    grid-column: 1 / 13;
+    font-size: 2.2rem;
+  }
+
+  .recipe-image {
+    grid-column: 1 / 13;
+  }
+  .recipe-ingredients {
+    grid-column: 1 / 6;
+    margin-right: 0;
+    gap: 0;
+  }
+
+  .recipe-instructions {
+    grid-column: 6 / 13;
+    margin-left: 0;
+  }
+
+  .recipe-notes {
+    grid-column: 1 / 13;
+  }
+
+  .recipe-source {
+    grid-column: 1 / 13;
+  }
+}
+
+/* Ipad Pro layout Styles */
+
+@media only screen and (min-width: 900px) {
+  .recipe-title {
+    width: 45vw;
+
+    /* grid-column: 4 / 10; */
+  }
+}
+
+/* Desktop layout Styles */
+
+@media only screen and (min-width: 1200px) {
+  .recipe-wrapper {
+    gap: 35px;
+  }
+
+  .recipe-title {
+    width: 45vw;
+    margin: 0 auto;
+    margin-top: 30px;
+    grid-column: 3 / 11;
+  }
+
+  .recipe-image {
+    grid-column: 1 / 13;
+    background-color: #83c3c0;
+    margin: 0 auto;
+    padding: 0px;
+  }
+
+  .recipe-image img {
+    border: 3px solid #f1f1f1f1;
+    width: 400px;
+
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+  }
+  .recipe-description {
+    grid-column: 1 / 13;
+  }
+
+  .recipe-instructions {
+    margin-right: 35px;
+  }
+
+  .recipe-ingredients {
+    margin-left: 35px;
+  }
+
+  .recipe-notes {
+    margin: 0 35px;
+  }
+
+  .recipe-source {
+    margin: 0 35px 35px 35px;
+  }
+}
+/* Larger desktop screens */
+
+@media only screen and (min-width: 1400px) {
+  .recipe-title {
+    width: 50vw;
+  }
+  .recipe-description {
+    grid-column: 1 / 13;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .recipe-title {
+    width: 45vw;
+  }
+  .recipe-wrapper {
+    gap: 50px;
+  }
+
+  .recipe-instructions {
+    margin-right: 70px;
+  }
+
+  .recipe-ingredients {
+    margin-left: 70px;
+  }
+
+  .recipe-notes {
+    margin: 0 70px;
+  }
+
+  .recipe-source {
+    margin: 0 70px 70px 70px;
+  }
 }
