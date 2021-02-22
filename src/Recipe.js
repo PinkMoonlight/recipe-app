@@ -18,7 +18,7 @@ let Recipe = () => {
         {' '}
         These are easy, fudgey yet cakey and SO DELICIOUS. You'd have no idea
         they're grain free, dairy free, and can be made vegan! Can be done by
-        hand, with an electric mixer or Thermomix.
+        hand or with an electric mixer.
       </div>
       <div className="recipe recipe-ingredients">
         <h3 className="secondary-heading">Ingredients</h3>
@@ -61,7 +61,10 @@ let Recipe = () => {
 
         <h4 className="tertiary-heading">Optional:</h4>
         <ul>
-          <li>1/4 cup chopped macadmania or pistachio nuts</li>
+          <li>
+            1/4 cup any chopped and roasted nuts (pistachio, macadaemia, almond
+            etc)
+          </li>
           <li>1/4 cup dark chocolate chips</li>
         </ul>
       </div>
@@ -106,12 +109,6 @@ let Recipe = () => {
             with 2.5 tbsp of water. Combine and let sit for 10 minutes to
             thicken. I actually like to make this recipe with 1 egg and 1 flax
             egg. The texture turns out really well this way!
-          </p>
-          <p>
-            The chocolate drizzle is made from 1/4 cup chocolate chips plus 2
-            tsp coconut oil. Add the chips and oil to a sauce pan and put the
-            sauce pan in a larger pot with water (makeshift double burner) and
-            melt over low heat.
           </p>
           <p>
             The very best almond butter is the raw almond butter. It has the
