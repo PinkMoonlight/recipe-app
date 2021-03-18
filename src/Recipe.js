@@ -62,10 +62,10 @@ let Recipe = () => {
         <h4 className="tertiary-heading">Optional:</h4>
         <ul>
           <li>
-            1/4 cup any chopped and roasted nuts (pistachio, macadaemia, almond
-            etc)
+            1/4 - 1/2 cup any chopped and roasted nuts (pistachio, macadaemia,
+            almond etc)
           </li>
-          <li>1/4 cup dark chocolate chips</li>
+          <li>1/4 - 1/2 cup dark chocolate chips</li>
         </ul>
       </div>
       <div className="recipe recipe-instructions">
@@ -77,7 +77,7 @@ let Recipe = () => {
           <li>
             Add in all remaining dry ingredients and stir with a wooden spoon.
             The batter will be on the thicker side. Be sure to spoon and level
-            the flour, don't scoop straight from the bag.
+            the flour, don't scoop straight from the bag or compact it.
           </li>
           <li>
             Add the batter to an 8x8 pan lined with parchment paper. Spread
@@ -88,7 +88,8 @@ let Recipe = () => {
             Bake for 22-28 minutes (it will depend on your oven) or until a
             toothpick comes out clean, 25 minutes is perfect in my oven. If you
             prefer fudgier brownies, bake for closer to 20 minutes, for more
-            well come brownies, bake closer to 28.
+            well done brownies, bake closer to 28. (Or 24 minutes for a 12 cup
+            silicone muffin/cupcake pan)
           </li>
           <li>
             Let cool completely before slicing. They tend to fall apart if you
@@ -122,6 +123,12 @@ let Recipe = () => {
             weird, but I promise it works and won't mess up the brownies! The
             key is to wipe the knife in between each slice if you want perfectly
             clean edges and ensure the knife is just damp, not really wet.
+          </p>
+          <p>
+            If using a cupcake or muffin tray, either use a silicone one so they
+            don't stick, and allow to cool alomst fully, before removing. Or if
+            don't have a silicone one, make sure you use some paper cupcake
+            liners.
           </p>
         </div>
         {/* <div className="own-notes">Input areainput field area</div> */}
